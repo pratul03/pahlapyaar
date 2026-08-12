@@ -9,7 +9,7 @@ import { nitro } from "nitro/vite";
 export default defineConfig({
   plugins: [
     tanstackStart(),
-    nitro({ preset: process.env.VERCEL ? "vercel" : "node-server" }),
+    nitro({ preset: process.env["VERCEL"] ? "vercel" : "node-server" }),
     tailwindcss(),
     react(),
     tsconfigPaths(),
